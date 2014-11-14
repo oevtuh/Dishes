@@ -1,0 +1,16 @@
+﻿@model Models.Dish
+
+@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading"> @Model.Name</h2>
+        <p class="lead">@Model.Description</p>
+    </div>
+    <div class="col-md-5">
+        <img class="featurette-image img-responsive" src="/content/images/@Model.Image" width="300" height="300" alt="Generic placeholder image">
+    </div>
+</div>

@@ -1,0 +1,7 @@
+D:\Projects\Dishes\DataLayer\bin\Debug\DataLayer.dll
+D:\Projects\Dishes\DataLayer\bin\Debug\DataLayer.pdb
+D:\Projects\Dishes\DataLayer\bin\Debug\Models.dll
+D:\Projects\Dishes\DataLayer\bin\Debug\Models.pdb
+D:\Projects\Dishes\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+D:\Projects\Dishes\DataLayer\obj\Debug\DataLayer.dll
+D:\Projects\Dishes\DataLayer\obj\Debug\DataLayer.pdb

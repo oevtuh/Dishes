@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Models.Dish>
+
+@{
+    ViewBag.Title = "Alldishes";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    @foreach (var dish in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <a href="@Url.Action("Dish", "Dishes", new { id = dish.Id})"><img src="/content/images/@dish.Image" alt="..."></a>
+            <div class="caption">
+                <h3>@dish.Name</h3>
+                <p>@dish.Description</p>
+                <p><a href="@Url.Action("Dish", "Dishes", new { id = dish.Id})" class="btn btn-primary" role="button">Подробнее</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+        </div>
+    </div>
+    }
+
+   
+    
+   
+</div>
+
+
+
