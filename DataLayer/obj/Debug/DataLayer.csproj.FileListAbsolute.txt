@@ -5,3 +5,8 @@ D:\Projects\Dishes\DataLayer\bin\Debug\Models.pdb
 D:\Projects\Dishes\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
 D:\Projects\Dishes\DataLayer\obj\Debug\DataLayer.dll
 D:\Projects\Dishes\DataLayer\obj\Debug\DataLayer.pdb
+D:\Projects\Dishes\DataLayer\bin\Debug\DataLayer.dll.config
+D:\Projects\Dishes\DataLayer\bin\Debug\EntityFramework.dll
+D:\Projects\Dishes\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Dishes\DataLayer\bin\Debug\EntityFramework.xml
+D:\Projects\Dishes\DataLayer\bin\Debug\EntityFramework.SqlServer.xml

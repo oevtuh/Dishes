@@ -8,6 +8,6 @@ namespace DataLayer.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public virtual IEnumerable<Ingredient> Ingredients { get; set; } 
+        public virtual ICollection<Ingredient> Ingredients { get; set; } 
     }
 }

@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Net;
-using System.Security.Cryptography.X509Certificates;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using DataLayer.Repositories.Dishes;
-using Dishes.Models;
 
 namespace Dishes.Controllers
 {
     public class DishesController : Controller
     {
-        private IDishesRepository _dishesRepository;
+        private readonly IDishesRepository _dishesRepository;
 
-        public DishesController()
+        public DishesController(IDishesRepository dishesRepository)
         {
-            _dishesRepository = new DishesRepository();
+            _dishesRepository = dishesRepository;
         }
+
         public ActionResult Index()
         {
             return View();
@@ -54,13 +48,12 @@ namespace Dishes.Controllers
             return View(model);
         }
 
-        [HttpPost]
         public JsonResult FindByIngredients()
         {
-            IEnumerable<int> ingredients = new List<int> {1,3,4};
+            IEnumerable<int> ingredients = new List<int> {1,2};
 
             var model = _dishesRepository.GetDishes(ingredients);
-            return Json(model);
+            return Json(model, JsonRequestBehavior.AllowGet);
         }
 
         

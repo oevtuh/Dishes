@@ -2,9 +2,9 @@
 
 namespace DataLayer.Entities
 {
-    public class DishesContext: DbContext
+    public class DishesContext : DbContext, IDishesContext
     {
-        public DishesContext(): base("DishesContext")
+        public DishesContext(): base("dishes10")
         {
             
         }
@@ -12,7 +12,16 @@ namespace DataLayer.Entities
         public DbSet<Ingredient> Ingredients { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            
+           modelBuilder.Entity<Ingredient>().HasMany(c => c.Dishes).
+
+           WithMany(p => p.Ingredients).
+           Map(
+           m =>
+           {
+               m.MapLeftKey("IngredientId");
+               m.MapRightKey("DishId");
+               m.ToTable("DishIngredients");
+            });
         }
     }
 }

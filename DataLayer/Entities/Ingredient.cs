@@ -7,7 +7,7 @@ namespace DataLayer.Entities
             public int ID { get; set; }
             public string Name { get; set; }
             public string Description { get; set; }
-            public virtual IEnumerable<Dish> Dishes { get; set; } 
+            public virtual ICollection<Dish> Dishes { get; set; } 
 
     }
 }
