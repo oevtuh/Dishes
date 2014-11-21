@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using DataLayer.Repositories.Dishes;
+using Newtonsoft.Json;
 
 namespace Dishes.Controllers
 {
@@ -19,7 +21,8 @@ namespace Dishes.Controllers
         }
         public ActionResult Choose()
         {
-            return View();
+           var model = _dishesRepository.GetIngredients();
+            return View(model);
         }
         public ActionResult Create()
         {
@@ -53,6 +56,24 @@ namespace Dishes.Controllers
             IEnumerable<int> ingredients = new List<int> {1,2};
 
             var model = _dishesRepository.GetDishes(ingredients);
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
+
+        //[AcceptVerbs(HttpVerbs.Get)]
+        public ActionResult People(string json)
+        {
+            //var deserializedObject = JsonConvert.DeserializeObject<List<int>>(json);
+
+           // string myobj = JsonConvert.SerializeObject(json);
+            IEnumerable<int> ingredients2 = new List<int>();
+           
+
+
+
+            IEnumerable<int> ingredients = new List<int> { 1, 2 };
+
+            var model = _dishesRepository.GetDishes(ingredients);
+
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
