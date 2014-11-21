@@ -31,7 +31,7 @@ namespace Dishes
            routes.MapRoute(
                null,
                "dishes/choose",
-               new { controller = "Dishes", action = "Create" }
+               new { controller = "Dishes", action = "Choose" }
            );
 
            routes.MapRoute(
