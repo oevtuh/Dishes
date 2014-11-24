@@ -4,78 +4,20 @@
     ViewBag.Title = "title";
     Layout = "../Shared/_Layout.cshtml";
 }
-<script>
-
-
-    function func2() {
-        alert('ddddd');
-        $.getJSON("FindByIngredients", null, getPeople);
-    }
-
-
-    function func1() {
-
-        var str = $("form").serialize();
-        alert(str);
-        $("#results").text(str);
-
-    }
-
-    function getPeople(people) {
-        $("#people_list").text("555");
-        $.each(people, function(i) {
-            $("#people_list").append("<li>" + this.Name + "</li>");
-        });
-    }
-
-    function func3() {
-        alert('fffffff');
-        $.ajax({
-            type: 'POST',
-            url: 'FindByIngredients',
-            data: null,
-            success: function(data) {
-                $("#people_list").text("555");
-                $.each(data, function(i) {
-                    $("#people_list").append("<li>" + this.Name + "</li>");
-                });
-            }
-        });
-      
-    }
-
-    function func4() {
-      
-        
-        $.ajax({
-            url: 'People',
-            type: 'post',
-            data: $("#formId").serialize(),
-            dataType: 'json',
-            success: function (data) {
-                var s = $("#formId").serialize();
-                $("#people_list").empty();
-                    $.each(data, function (i) {
-                        $("#people_list").append("<li>" + this.Name + "</li>"+s+typeof (s));
-                    });
-              
-            }
-        });
-    }
-
-</script>
 
 
 
+
+   
 
     <h2>Choose page</h2>
 <ul>
-    <form id="formId" onchange="func4()">
+    <form id="formId">
 
         @foreach (var ingredient in Model)
         {
             <li>
-                <input type="checkbox" name="@ingredient.Id" />
+                <input type="checkbox" value="@ingredient.Id" name="List" />
                 @ingredient.Name
             </li>
         }
@@ -84,16 +26,15 @@
 
 </ul>
 
-<input type="button" id="getPeople" value="Get People" onclick="func4()" />
-<ul id="people_list">
-    6
+
+<ul id="dishes_list">
+    
 </ul>
 
-<p id="results">
 
-</p>
-
-
+@section scripts {
+   @Scripts.Render("~/bundles/choose")
+}
 
 
 

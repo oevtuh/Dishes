@@ -51,28 +51,43 @@ namespace Dishes.Controllers
             return View(model);
         }
 
-        public JsonResult FindByIngredients()
+        /*public JsonResult FindByIngredients()
         {
-            IEnumerable<int> ingredients = new List<int> {1,2};
+            IEnumerable<int> ingredients = new List<int> {1,2,4};
 
             var model = _dishesRepository.GetDishes(ingredients);
             return Json(model, JsonRequestBehavior.AllowGet);
-        }
+        }*/
 
-        //[AcceptVerbs(HttpVerbs.Get)]
-        public ActionResult People(string json)
+        //[AcceptVerbs(HttpVerbs.Post)]
+        [HttpPost]
+        public ActionResult FindByIngredients(string Name)
         {
             //var deserializedObject = JsonConvert.DeserializeObject<List<int>>(json);
 
            // string myobj = JsonConvert.SerializeObject(json);
-            IEnumerable<int> ingredients2 = new List<int>();
-           
+           // ICollection<int> ingredients2 = new List<int>();
 
+            List<int> idList= new List<int>();
+            foreach (var i in Name)
+            {
+                idList.Add(Convert.ToInt32(i)-48);
+            }
+            
 
-
-            IEnumerable<int> ingredients = new List<int> { 1, 2 };
-
-            var model = _dishesRepository.GetDishes(ingredients);
+            //IList<int> ingredients;// = ingredients = new List<int> { 1 };
+            //if (Name.Length < 5)
+            //{
+            //    ingredients = new List<int> {1, 2};
+            //}
+            //else
+            //{
+            //    ingredients = new List<int> {1, 2, 3, 4};
+            //}
+            // ingredients.Add(2);
+            
+            
+            var model = _dishesRepository.GetDishes(idList);
 
             return Json(model, JsonRequestBehavior.AllowGet);
         }
