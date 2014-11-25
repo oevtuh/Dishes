@@ -1,36 +1,36 @@
-﻿   $("#formId").change(function () {
-           func4();
-       });
+﻿(function($) {
+    $(".ingredients-list>li").change(selectDishes);
+
+    function selectDishes() {
+        var dishes = [];
+
+        $("input[name='List']:checked").each(function() {
+            dishes.push(+$(this).val());
+        });
 
 
-  
+        $.ajax({
+            url: 'FindByIngredients',
+            type: 'get',
+            data: {
+                dishes: dishes
+            },
+            traditional: true,
+            dataType: 'json',
+            success: function (data) {
+                $("#dishes_list").empty();
+                $.each(data, function (i) {
+                    $("#dishes_list").append("<li>" + this.Name + "</li>");
+                });
+            }
+        });
+    };
 
-function func4() {
 
-    var idList = new Array();
-    var loopCounter = 0;
-    $("input[name='List']:checked").each(function () {
-        idList[loopCounter] = $(this).val();
-        loopCounter += 1;
-    });
+})(jQuery);
 
-    var obj = { Name: idList.toString() };
 
-    $.ajax({
-        url: 'FindByIngredients',
-        type: 'post',
-        data: obj,
-        dataType: 'json',
-        success: function (data) {
-            var s = $("#formId").serialize();
-            $("#dishes_list").empty();
-            $.each(data, function (i) {
-                $("#dishes_list").append("<li>" + this.Name + "</li>");
-            });
 
-        }
-    });
-}
 
 
 

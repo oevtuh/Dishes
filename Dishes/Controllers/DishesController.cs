@@ -60,19 +60,19 @@ namespace Dishes.Controllers
         }*/
 
         //[AcceptVerbs(HttpVerbs.Post)]
-        [HttpPost]
-        public ActionResult FindByIngredients(string Name)
+        //[HttpPost]
+        public ActionResult FindByIngredients(List<int> dishes)
         {
             //var deserializedObject = JsonConvert.DeserializeObject<List<int>>(json);
 
            // string myobj = JsonConvert.SerializeObject(json);
            // ICollection<int> ingredients2 = new List<int>();
 
-            List<int> idList= new List<int>();
-            foreach (var i in Name)
-            {
-                idList.Add(Convert.ToInt32(i)-48);
-            }
+            //List<int> idList= new List<int>();
+            //foreach (var i in Name)
+            //{
+            //    idList.Add(Convert.ToInt32(i)-48);
+            //}
             
 
             //IList<int> ingredients;// = ingredients = new List<int> { 1 };
@@ -85,9 +85,9 @@ namespace Dishes.Controllers
             //    ingredients = new List<int> {1, 2, 3, 4};
             //}
             // ingredients.Add(2);
-            
-            
-            var model = _dishesRepository.GetDishes(idList);
+
+
+            var model = _dishesRepository.GetDishes(dishes);
 
             return Json(model, JsonRequestBehavior.AllowGet);
         }

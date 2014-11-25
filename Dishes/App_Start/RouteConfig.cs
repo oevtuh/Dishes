@@ -58,11 +58,7 @@ namespace Dishes
            new { controller = "Dishes", action = "FindByIngredients" }
           );
 
-           routes.MapRoute(
-          null,
-          "dishes/People",
-          new { controller = "Dishes", action = "People" }
-         );
+         
             routes.MapRoute(
             null,
             "dishes/{id}",
