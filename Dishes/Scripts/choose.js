@@ -6,7 +6,7 @@
     ko.applyBindings(d);
 
     function selectDishes() {
-        var dishes = [];
+        //var dishes = [];
 
         $.ajax({
             url: 'FindByIngredients',
@@ -25,7 +25,7 @@
                 //});
 
                 //$('.panel-body').html('<p>Full name: <strong data-bind="text: fullName"></strong></p>');
-                d.updateSeats(data);
+                d.updateDishes(data);
             }
         });
     };

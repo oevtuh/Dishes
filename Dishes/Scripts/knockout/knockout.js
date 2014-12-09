@@ -47,12 +47,12 @@
 function ViewModel() {
     var self = this;
 
-    self.seats = ko.observableArray();
+    self.dishes = ko.observableArray();
 
   
-    self.updateSeats = function (data) {
+    self.updateDishes = function (data) {
        // self.seats.clean();
-        self.seats(data);
+        self.dishes(data);
     };
 
     
