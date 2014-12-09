@@ -20,10 +20,8 @@
         
     
         <ul data-bind="foreach: dishes">
-            <tr>
-            <li data-bind="text: Name"></li>
-
-            </tr>
+                <li><a data-bind="text: Name, attr: { href: $root.getUrl(Id) }"></a></li>
+         
         </ul>
        
         @*<p>Full name: <strong data-bind="text: fullName"></strong></p>*@

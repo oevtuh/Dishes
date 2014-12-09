@@ -51,11 +51,18 @@ function ViewModel() {
 
   
     self.updateDishes = function (data) {
-       // self.seats.clean();
+       // self.dishes.clean();
         self.dishes(data);
     };
 
-    
+    self.getUrl = function(index) {
+        return "/dishes/" + index;
+    }
+
+   
+
+   
+
     //self.addSeat2 = function () {
     //    self.seats()[0].name("dd");
     //};

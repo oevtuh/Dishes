@@ -1,9 +1,9 @@
 ﻿(function ($) {
     $(".chzn-select").change(selectDishes);
 
-    var d = new ViewModel();
+    var viewModel = new ViewModel();
 
-    ko.applyBindings(d);
+    ko.applyBindings(viewModel);
 
     function selectDishes() {
         //var dishes = [];
@@ -25,7 +25,7 @@
                 //});
 
                 //$('.panel-body').html('<p>Full name: <strong data-bind="text: fullName"></strong></p>');
-                d.updateDishes(data);
+                viewModel.updateDishes(data);
             }
         });
     };
