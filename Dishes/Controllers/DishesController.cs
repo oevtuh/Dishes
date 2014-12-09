@@ -75,7 +75,7 @@ namespace Dishes.Controllers
             //}
             
 
-            //IList<int> ingredients;// = ingredients = new List<int> { 1 };
+            //IList<int> ingredients = new List<int> { 1,2,3 };
             //if (Name.Length < 5)
             //{
             //    ingredients = new List<int> {1, 2};
@@ -91,6 +91,7 @@ namespace Dishes.Controllers
 
             return Json(model, JsonRequestBehavior.AllowGet);
         }
+
 
         
     }

@@ -1,39 +1,34 @@
-﻿(function($) {
-    $(".ingredients-list>li").change(selectDishes);
+﻿(function ($) {
+    $(".chzn-select").change(selectDishes);
+
+    var d = new ViewModel();
+
+    ko.applyBindings(d);
 
     function selectDishes() {
         var dishes = [];
-
-        $("input[name='List']:checked").each(function() {
-            dishes.push(+$(this).val());
-        });
-
 
         $.ajax({
             url: 'FindByIngredients',
             type: 'get',
             data: {
-                dishes: dishes
+                dishes: $(".chzn-select").val(),
             },
             traditional: true,
             dataType: 'json',
             success: function (data) {
-                $("#dishes_list").empty();
-                $.each(data, function (i) {
-                    $("#dishes_list").append("<li>" + this.Name + "</li>");
-                });
+                
+                //$('.panel-body').empty();
+                //$.each(data, function (i) {
+                //    $('.panel-body').append('<li><a href="/dishes/' + this.Id + '">' + this.Name + '</a></li>');
+                    
+                //});
+
+                //$('.panel-body').html('<p>Full name: <strong data-bind="text: fullName"></strong></p>');
+                d.updateSeats(data);
             }
         });
     };
 
 
 })(jQuery);
-
-
-
-
-
-
-
-    
-

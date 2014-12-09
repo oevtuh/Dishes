@@ -5,38 +5,72 @@
     Layout = "../Shared/_Layout.cshtml";
 }
 
-<script>
-    $().init(@Model.Select(x => new { id = x.Id, title = x.Name }));
-</script>
 
 
+
+<html>
+<head>
+
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+
+
+    <link rel="stylesheet" href="../../Content/chosen.css">
+</head>
+    <body>
+        
+    
+            <ul data-bind="foreach: seats">
+                <tr>
+                    <li data-bind="text: Name"></li>
+                    
+                </tr>
+            </ul>
+       
+        @*<p>Full name: <strong data-bind="text: fullName"></strong></p>*@
+
+        @*<button data-bind="click: addSeat">Reserve another seat</button>
+        <button data-bind="click: addSeat2">Reserve another seat2</button>*@
+        
+        
+
+        <script type="text/javascript">
+            $(function () {
+                $(".chzn-select").chosen();
+            });
+        </script>
+
+        <select class="chzn-select" multiple="true" name="faculty" style="width:200px;">
+            @foreach (var ingredient in Model)
+            {
+                <option value=@ingredient.Id>
+                    @ingredient.Name
+                </option>
+            }
+
+        </select>
+
+
+        <ul id="dishesList"></ul>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Блюда, которые можно приготовить</div>
+            <div class="panel-body">
+
+            </div>
+        </div>
+    
+    
+
+    </body>
+</html>
+
+@section scripts{
+    
+    @Scripts.Render("~/bundles/knockout")
+    <script src="../../Scripts/knockout/knockout.js"></script>
+
+    <script src="../../Scripts/chosen.jquery.js"></script>
+    @Scripts.Render("~/bundles/choose")
    
-
-    <h2>Choose page</h2>
-<ul class="ingredients-list">
-    
-
-    @foreach (var ingredient in Model)
-    {
-        <li>
-            <input type="checkbox" value="@ingredient.Id" name="List" />
-            @ingredient.Name
-        </li>
-    }
-
-</ul>
-
-
-<ul id="dishes_list">
-    
-</ul>
-
-
-@section scripts {
-   @Scripts.Render("~/bundles/choose")
+  
 }
-
-
-
-
-
