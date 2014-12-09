@@ -65,6 +65,14 @@ namespace Dishes
             "dishes/{id}",
             new { controller = "Dishes", action = "Dish" }
            );
+            
+           // //for the ulr.action
+           // routes.MapRoute(
+           // null,
+           // "dishes/",
+           // new { controller = "Dishes", action = "Dish" }
+           //);
+
 
             routes.MapRoute(
             null,

@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Models.Ingredient>
+﻿@using Dishes.Helpers
+
+@model IEnumerable<Models.Ingredient>
 
 @{
     ViewBag.Title = "title";
@@ -17,11 +19,15 @@
     <link rel="stylesheet" href="../../Content/chosen.css">
 </head>
     <body>
-        
+        @*'@Url.Action("Dish", "Dishes")'*@
     
         <ul data-bind="foreach: dishes">
                 <li><a data-bind="text: Name, attr: { href: $root.getUrl(Id) }"></a></li>
-         
+                <li><a data-bind="text: Name, attr: { href: '@Url.Action("Dish", "Dishes")'+'/'+Id }"></a></li>
+                <li><a data-bind="text: Name, attr: { href: '@Url.AbsoluteAction("Dish", "Dishes")'.replace('{id}', Id)}"></a></li>
+
+            
+           
         </ul>
        
         @*<p>Full name: <strong data-bind="text: fullName"></strong></p>*@
@@ -58,7 +64,6 @@
         </div>
     
     
-
     </body>
 </html>
 
