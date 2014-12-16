@@ -1,4 +1,6 @@
 ﻿(function ($) {
+   
+
     $(".chzn-select").change(selectDishes);
 
     var viewModel = new ViewModel();

@@ -21,14 +21,7 @@
     <body>
         @*'@Url.Action("Dish", "Dishes")'*@
     
-        <ul data-bind="foreach: dishes">
-                <li><a data-bind="text: Name, attr: { href: $root.getUrl(Id) }"></a></li>
-                <li><a data-bind="text: Name, attr: { href: '@Url.Action("Dish", "Dishes")'+'/'+Id }"></a></li>
-                <li><a data-bind="text: Name, attr: { href: '@Url.AbsoluteAction("Dish", "Dishes")'.replace('{id}', Id)}"></a></li>
-
-            
-           
-        </ul>
+        
        
         @*<p>Full name: <strong data-bind="text: fullName"></strong></p>*@
 
@@ -56,10 +49,16 @@
 
         <ul id="dishesList"></ul>
 
-        <div class="panel panel-default">
-            <div class="panel-heading">Блюда, которые можно приготовить</div>
+        <div class="panel panel-default" data-bind="visible: dishes().length">
+            <div class=" panel-heading">Блюда, которые можно приготовить</div>
             <div class="panel-body">
+                <ul data-bind="foreach: dishes">
+                    @*<li><a data-bind="text: Name, attr: { href: $root.getUrl(Id) }"></a></li>
+            <li><a data-bind="text: Name, attr: { href: '@Url.Action("Dish", "Dishes")'+'/'+Id }"></a></li>*@
+                    <li><a data-bind="text: Name, attr: { href: '@Url.AbsoluteAction("Dish", "Dishes")'.replace('{id}', Id)}"></a></li>
 
+
+                </ul>
             </div>
         </div>
     
