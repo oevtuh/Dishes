@@ -3,3 +3,8 @@ D:\Projects\Dishes\Models\bin\Debug\Models.pdb
 D:\Projects\Dishes\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 D:\Projects\Dishes\Models\obj\Debug\Models.dll
 D:\Projects\Dishes\Models\obj\Debug\Models.pdb
+D:\темы bootstrap\Dishes\Models\bin\Debug\Models.dll
+D:\темы bootstrap\Dishes\Models\bin\Debug\Models.pdb
+D:\темы bootstrap\Dishes\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\темы bootstrap\Dishes\Models\obj\Debug\Models.dll
+D:\темы bootstrap\Dishes\Models\obj\Debug\Models.pdb

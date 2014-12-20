@@ -40,3 +40,31 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+
+.start_button{
+ text-decoration:none; 
+ text-align:center; 
+ padding:11px 32px; 
+ border:none;
+
+    font-size: 22px;
+    font-family: "Lato";
+ font-weight:bold; 
+ color:#ffffff; 
+ background:#ff7878; 
+ -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff; 
+ -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px 1px #ffffff;  
+ box-shadow:0px 0px 2px #bababa, inset 0px 0px 1px #ffffff;  
+ opacity:1; 
+ -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=78); 
+ filter: alpha(opacity=78); 
+    font-family: "Lato";
+  }
+ 
+.start_button:hover{
+    background: none;
+    color:#ffffff; 
+}
+
+

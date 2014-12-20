@@ -5,29 +5,78 @@
     Layout = "../Shared/_Layout.cshtml";
 }
 
-<!-- Jumbotron -->
-<div class="jumbotron">
-    <h1>Подбор блюда по ингредиентам</h1>
-    <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-    <p><a class="btn btn-lg btn-success" href="@Url.Action("Choose", "Dishes")" role="button">Начать подбор</a></p>
-</div>
+<div id="headerwrap">
+    <div class="container">
+        <div class="row centered">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1>It Doesn't Take a Rocket <b>Scientist</b></h1>
+                <a href="@Url.Action("Choose", "Dishes")" class="start_button">START</a>
 
-<!-- Example row of columns -->
-<div class="row">
-    <div class="col-lg-4">
-        <h2>Safari bug warning!</h2>
-        <p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-primary" href="#" role="button">View details ;</a></p>
-    </div>
-    <div class="col-lg-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-primary" href="#" role="button">View details ;</a></p>
-    </div>
-    <div class="col-lg-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-        <p><a class="btn btn-primary" href="#" role="button">View details </a></p>
-    </div>
-</div>
+            </div>
+        </div><!-- row -->
+    </div><!-- container -->
+</div><!-- headerwrap -->
+
+<div class="container w">
+    <div class="row centered">
+        <br><br>
+        <div class="col-lg-4">
+            <i class="fa fa-heart"></i>
+            <h4>DESIGN</h4>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
+        </div><!-- col-lg-4 -->
+        <div class="col-lg-4">
+            <i class="fa fa-laptop"></i>
+            <h4>BOOTSTRAP</h4>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
+        </div><!-- col-lg-4 -->
+        <div class="col-lg-4">
+            <i class="fa fa-trophy"></i>
+            <h4>SUPPORT</h4>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even believable.</p>
+        </div><!-- col-lg-4 -->
+    </div><!-- row -->
+    <br>
+    <br>
+</div><!-- container -->
+
+<!-- PORTFOLIO SECTION -->
+<div id="dg">
+    <div class="container">
+        <div class="row centered">
+            <h4>LATEST WORKS</h4>
+            <br>
+            <div class="col-lg-4">
+                <div class="tilt">
+                    <a href="#"><img src="~/Content/images/p01.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tilt">
+                    <a href="#"><img src="~/Content/images/p03.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tilt">
+                    <a href="#"><img src="~/Content/images/p02.png" alt=""></a>
+                </div>
+            </div>
+        </div><!-- row -->
+    </div><!-- container -->
+</div><!-- DG -->
+<!-- FEATURE SECTION -->
+<div class="container wb">
+    <div class="row centered">
+        <br><br>
+        <div class="col-lg-8 col-lg-offset-2">
+            <h4>WE CREATE FIRST CLASS DESIGN</h4>
+            <p>By being true to the brand we represent, we elevate the audiences’ relationship to it. Like becomes love becomes a passion. Passion becomes advocacy. And we see the brand blossom from within, creating a whole story the audience embraces. That’s when the brand can truly flex its muscles.</p>
+            <p><br /><br /></p>
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-10 col-lg-offset-1">
+            <img class="img-responsive" src="~/Content/images/munter.png" alt="">
+        </div>
+    </div><!-- row -->
+</div><!-- container -->
+

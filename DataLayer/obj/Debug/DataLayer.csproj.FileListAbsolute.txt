@@ -10,3 +10,15 @@ D:\Projects\Dishes\DataLayer\bin\Debug\EntityFramework.dll
 D:\Projects\Dishes\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
 D:\Projects\Dishes\DataLayer\bin\Debug\EntityFramework.xml
 D:\Projects\Dishes\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\темы bootstrap\Dishes\DataLayer\bin\Debug\DataLayer.dll.config
+D:\темы bootstrap\Dishes\DataLayer\bin\Debug\DataLayer.dll
+D:\темы bootstrap\Dishes\DataLayer\bin\Debug\DataLayer.pdb
+D:\темы bootstrap\Dishes\DataLayer\bin\Debug\EntityFramework.dll
+D:\темы bootstrap\Dishes\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\темы bootstrap\Dishes\DataLayer\bin\Debug\Models.dll
+D:\темы bootstrap\Dishes\DataLayer\bin\Debug\Models.pdb
+D:\темы bootstrap\Dishes\DataLayer\bin\Debug\EntityFramework.xml
+D:\темы bootstrap\Dishes\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\темы bootstrap\Dishes\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+D:\темы bootstrap\Dishes\DataLayer\obj\Debug\DataLayer.dll
+D:\темы bootstrap\Dishes\DataLayer\obj\Debug\DataLayer.pdb
