@@ -195,6 +195,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Absolute.cs" />
+    <Compile Include="Migrations\201412212104150_DummyMigration.cs" />
+    <Compile Include="Migrations\201412212104150_DummyMigration.Designer.cs">
+      <DependentUpon>201412212104150_DummyMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412212105164_AlterDishes.cs" />
+    <Compile Include="Migrations\201412212105164_AlterDishes.Designer.cs">
+      <DependentUpon>201412212105164_AlterDishes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Dish.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -229,7 +238,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-3.2.0.debug.js" />
     <Content Include="Scripts\knockout-3.2.0.js" />
-    <Content Include="Scripts\knockout\knockout.js" />
+    <Content Include="Scripts\knockout\dishesViewModel.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -284,6 +293,14 @@
       <Project>{556e76c5-3c1a-428c-89f3-699bd226a671}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201412212104150_DummyMigration.resx">
+      <DependentUpon>201412212104150_DummyMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412212105164_AlterDishes.resx">
+      <DependentUpon>201412212105164_AlterDishes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

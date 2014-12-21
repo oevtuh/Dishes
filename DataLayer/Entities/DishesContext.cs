@@ -4,7 +4,8 @@ namespace DataLayer.Entities
 {
     public class DishesContext : DbContext, IDishesContext
     {
-        public DishesContext(): base("dishes10")
+        public DishesContext(): 
+            base("dishes10")
         {
             
         }

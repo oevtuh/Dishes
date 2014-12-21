@@ -28,8 +28,9 @@ namespace Dishes
                      "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/choose").Include(
-                     
-                    "~/Scripts/choose.js"
+                     "~/Scripts/chosen.jquery.js",  
+                     "~/Scripts/choose.js"
+
                     ));
 
            bundles.Add(new StyleBundle("~/Content/css").Include(

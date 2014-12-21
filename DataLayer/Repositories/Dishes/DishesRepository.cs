@@ -29,6 +29,7 @@ namespace DataLayer.Repositories.Dishes
                         Description = i.Description
                     }),
                     Description = x.Description,
+                    ShortDescription = x.ShortDescription,
                     Name = x.Name,
                     Image = x.Image
                 });
@@ -39,6 +40,7 @@ namespace DataLayer.Repositories.Dishes
             return _context.Dishes.Select(x=> new Models.Dish
                {Id = x.ID, 
                 Description = x.Description,
+                ShortDescription = x.ShortDescription,
                 Name = x.Name,
                 Image = x.Image 
                });
@@ -51,6 +53,7 @@ namespace DataLayer.Repositories.Dishes
             {
                 Id = x.ID,
                 Description = x.Description,
+                ShortDescription = x.ShortDescription,
                 Name = x.Name,
                 Image = x.Image
             }).FirstOrDefault(dish => dish.Id == id);
@@ -65,6 +68,7 @@ namespace DataLayer.Repositories.Dishes
                 {
                     Id = x.ID,
                     Description = x.Description,
+                    ShortDescription = x.ShortDescription,
                     Name = x.Name,
                     Image = x.Image
                 });

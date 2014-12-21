@@ -15,7 +15,7 @@
             <a href="@Url.Action("Dish", "Dishes", new { id = dish.Id})"><img src="/content/images/@dish.Image" alt="..."></a>
             <div class="caption">
                 <h3>@dish.Name</h3>
-                <p>@dish.Description</p>
+                <p>@dish.ShortDescription</p>
                 <p><a href="@Url.Action("Dish", "Dishes", new { id = dish.Id})" class="btn btn-primary" role="button">Подробнее</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
             </div>
         </div>

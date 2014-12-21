@@ -146,3 +146,6 @@ D:\темы bootstrap\Dishes\Dishes\bin\Microsoft.Owin.Security.MicrosoftAccount
 D:\темы bootstrap\Dishes\Dishes\obj\Debug\Dishes.csprojResolveAssemblyReference.cache
 D:\темы bootstrap\Dishes\Dishes\obj\Debug\Dishes.dll
 D:\темы bootstrap\Dishes\Dishes\obj\Debug\Dishes.pdb
+D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.DummyMigration.resources
+D:\Projects\Dishes\Dishes\obj\Debug\Dishes.csproj.GenerateResource.Cache
+D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.AlterDishes.resources
