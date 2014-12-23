@@ -203,9 +203,22 @@
     <Compile Include="Migrations\201412212105164_AlterDishes.Designer.cs">
       <DependentUpon>201412212105164_AlterDishes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412231115510_Add_DishCategory.cs" />
+    <Compile Include="Migrations\201412231115510_Add_DishCategory.Designer.cs">
+      <DependentUpon>201412231115510_Add_DishCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412231243155_Add_IngredientCategory.cs" />
+    <Compile Include="Migrations\201412231243155_Add_IngredientCategory.Designer.cs">
+      <DependentUpon>201412231243155_Add_IngredientCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412232049111_RenameDishCategoryDishesTable.cs" />
+    <Compile Include="Migrations\201412232049111_RenameDishCategoryDishesTable.Designer.cs">
+      <DependentUpon>201412232049111_RenameDishCategoryDishesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Dish.cs" />
+    <Compile Include="Models\DishCategory.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -300,6 +313,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412212105164_AlterDishes.resx">
       <DependentUpon>201412212105164_AlterDishes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412231115510_Add_DishCategory.resx">
+      <DependentUpon>201412231115510_Add_DishCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412231243155_Add_IngredientCategory.resx">
+      <DependentUpon>201412231243155_Add_IngredientCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412232049111_RenameDishCategoryDishesTable.resx">
+      <DependentUpon>201412232049111_RenameDishCategoryDishesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

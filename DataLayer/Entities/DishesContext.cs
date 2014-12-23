@@ -11,6 +11,9 @@ namespace DataLayer.Entities
         }
         public DbSet<Dish> Dishes { get; set; }
         public DbSet<Ingredient> Ingredients { get; set; }
+        public DbSet<DishCategory> DishCategories { get; set; }
+        public DbSet<IngredientCategory> IngredientCategories { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
            modelBuilder.Entity<Ingredient>().HasMany(c => c.Dishes).
@@ -23,6 +26,23 @@ namespace DataLayer.Entities
                m.MapRightKey("DishId");
                m.ToTable("DishIngredients");
             });
+
+
+          //modelBuilder.Entity<DishCategory>().HasMany(c => c.Dishes).
+
+          //WithMany(p => p.Categories).
+          //Map(
+          //m =>
+          //{
+          //    m.MapLeftKey("CategoryId");
+          //    m.MapRightKey("DishId");
+          //    m.ToTable("DishCategories");
+          //});
+
+
         }
+
+
+
     }
 }

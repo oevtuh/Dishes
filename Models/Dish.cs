@@ -12,5 +12,7 @@ namespace Models
 
         public IEnumerable<Ingredient> Ingredients;
 
+        public IEnumerable<DishCategory> Categories;
+
     }
 }

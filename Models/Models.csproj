@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dish.cs" />
+    <Compile Include="DishCategory.cs" />
     <Compile Include="Ingredient.cs" />
+    <Compile Include="IngredientCategory.cs" />
     <Compile Include="MyExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

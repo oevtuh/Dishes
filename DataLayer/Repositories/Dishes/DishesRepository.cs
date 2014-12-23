@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DataLayer.Entities;
+using Models;
 using Dish = Models.Dish;
 using Ingredient = Models.Ingredient;
+using DishCategory = Models.DishCategory;
 
 namespace DataLayer.Repositories.Dishes
 {
@@ -28,6 +30,11 @@ namespace DataLayer.Repositories.Dishes
                         Name = i.Name,
                         Description = i.Description
                     }),
+                    Categories = x.Categories.Select(i => new DishCategory
+                    {
+                        Id = i.ID,
+                        Name = i.Name
+                    }),
                     Description = x.Description,
                     ShortDescription = x.ShortDescription,
                     Name = x.Name,
@@ -43,7 +50,7 @@ namespace DataLayer.Repositories.Dishes
                 ShortDescription = x.ShortDescription,
                 Name = x.Name,
                 Image = x.Image 
-               });
+               }).ToList();
         }
 
         public Dish GetDish(int id)
@@ -71,7 +78,7 @@ namespace DataLayer.Repositories.Dishes
                     ShortDescription = x.ShortDescription,
                     Name = x.Name,
                     Image = x.Image
-                });
+                }).ToList();
         }
 
         public IEnumerable<Ingredient> GetIngredients()
@@ -82,7 +89,7 @@ namespace DataLayer.Repositories.Dishes
                 Description = x.Description,
                 Name = x.Name,
                 
-            });
+            }).ToList();
         }
 
     }

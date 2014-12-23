@@ -149,3 +149,6 @@ D:\темы bootstrap\Dishes\Dishes\obj\Debug\Dishes.pdb
 D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.DummyMigration.resources
 D:\Projects\Dishes\Dishes\obj\Debug\Dishes.csproj.GenerateResource.Cache
 D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.AlterDishes.resources
+D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.Add_DishCategory.resources
+D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.Add_IngredientCategory.resources
+D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.RenameDishCategoryDishesTable.resources
