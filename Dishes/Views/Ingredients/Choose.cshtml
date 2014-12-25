@@ -1,8 +1,9 @@
-﻿@model IEnumerable<Models.IngredientCategory>
+﻿
+@model IEnumerable<Models.IngredientCategory>
 
 @{
     ViewBag.Title = "IngredientController-Choose";
-    
+    Layout = null;
 }
 
 
@@ -18,13 +19,47 @@
 
 @foreach (var category in Model)
 {
-    <div style="border:black solid 1px ">
-      +@category.Name
+    <div class="category-box"  style="border:black solid 1px; float: left; margin: 15px; padding: 15px; width: 150px; ">
+        @*<span class="plus">+ </span>
+        <span class="minus">- </span >*@
+        <span class="category" data-categoryid="@category.Id">@category.Name </span> 
+        <br/>
+        <div class="div1" >
+            @foreach (var ingredient in category.Ingredients)
+            {
+                <input class="ch1" type="checkbox" data-ingredientid="@ingredient.Id" value="@ingredient.Id"/>
+                @ingredient.Name
+                <br />
 
-      @foreach (var ingredient in category.Ingredients)
-      {
-          @ingredient.Name
-      }
+            }
+        </div>
+
     </div> 
     
 }
+
+<div style="clear: both"></div>
+
+
+
+
+
+
+   
+    <script>
+        $(document).ready(function () {
+
+            $(".plus").show();
+            $(".minus").hide();
+            $(".div1").hide();
+            $(".category").click(function () {
+                var temp = $(this).data('categoryId');
+                console.log(temp);
+                $(".plus").toggle();
+                $(".minus").toggle();
+                $(".div1").fadeToggle();
+
+            });
+
+        });
+    </script>
