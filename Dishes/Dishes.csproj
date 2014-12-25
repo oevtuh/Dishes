@@ -191,6 +191,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DishesController.cs" />
+    <Compile Include="Controllers\IngredientsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -286,6 +287,7 @@
     <Content Include="Views\Dishes\Dish.cshtml" />
     <Content Include="Views\Dishes\FindByIngredient.cshtml" />
     <Content Include="Views\Dishes\FindByIngredients.cshtml" />
+    <Content Include="Views\Ingredients\Choose.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

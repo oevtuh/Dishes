@@ -55,6 +55,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Dishes\DishesRepository.cs" />
     <Compile Include="Repositories\Dishes\IDishesRepository.cs" />
+    <Compile Include="Repositories\Ingredients\IIngredientsRepository.cs" />
+    <Compile Include="Repositories\Ingredients\IngredientsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

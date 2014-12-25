@@ -1,5 +1,6 @@
 using DataLayer.Entities;
 using DataLayer.Repositories.Dishes;
+using DataLayer.Repositories.Ingredients;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Dishes.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Dishes.App_Start.NinjectWebCommon), "Stop")]
@@ -65,7 +66,10 @@ namespace Dishes.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IDishesRepository>().To<DishesRepository>();
+            kernel.Bind<IIngredientsRepository>().To<IngredientsRepository>();
             kernel.Bind<IDishesContext>().To<DishesContext>();
+
+
         }        
     }
 }

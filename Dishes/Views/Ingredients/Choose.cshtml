@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Models.IngredientCategory>
+
+@{
+    ViewBag.Title = "IngredientController-Choose";
+    
+}
+
+
+@*<select class="chzn-select" multiple="true" name="faculty" style="width:200px;">
+        @foreach (var ingredient in Model)
+        {
+            <option value=@ingredient.Id>
+                @ingredient.Name
+            </option>
+        }
+
+    </select>*@
+
+@foreach (var category in Model)
+{
+    <div style="border:black solid 1px ">
+      +@category.Name
+
+      @foreach (var ingredient in category.Ingredients)
+      {
+          @ingredient.Name
+      }
+    </div> 
+    
+}

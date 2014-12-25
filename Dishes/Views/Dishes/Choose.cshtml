@@ -1,6 +1,6 @@
 ﻿@using Dishes.Helpers
 
-@model IEnumerable<Models.Ingredient>
+@*@model IEnumerable<Models.Ingredient>*@
 
 @{
     ViewBag.Title = "title";
@@ -29,7 +29,7 @@
         <button data-bind="click: addSeat2">Reserve another seat2</button>*@
         
 
-        <select class="chzn-select" multiple="true" name="faculty" style="width:200px;">
+        @*<select class="chzn-select" multiple="true" name="faculty" style="width:200px;">
             @foreach (var ingredient in Model)
             {
                 <option value=@ingredient.Id>
@@ -37,7 +37,18 @@
                 </option>
             }
 
-        </select>
+        </select>*@
+        @Html.Action("Choose", "Ingredients");
+        @*<div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                Dropdown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+                <input type="checkbox"/>dfff
+            </ul>
+        </div>*@
+        
 
 
         <ul id="dishesList"></ul>
@@ -46,8 +57,7 @@
             <div class=" panel-heading">Блюда, которые можно приготовить</div>
             <div class="panel-body">
                 <ul data-bind="foreach: dishes">
-                    @*<li><a data-bind="text: Name, attr: { href: $root.getUrl(Id) }"></a></li>
-            <li><a data-bind="text: Name, attr: { href: '@Url.Action("Dish", "Dishes")'+'/'+Id }"></a></li>*@
+                   
                     <li><a data-bind="text: Name, attr: { href: '@Url.AbsoluteAction("Dish", "Dishes")'.replace('{id}', Id)}"></a></li>
 
 

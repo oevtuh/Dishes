@@ -21,8 +21,8 @@ namespace Dishes.Controllers
         }
         public ActionResult Choose()
         {
-           var model = _dishesRepository.GetIngredients();
-            return View(model);
+            
+            return View();
         }
         public ActionResult Create()
         {

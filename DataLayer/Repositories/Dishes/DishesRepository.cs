@@ -80,16 +80,7 @@ namespace DataLayer.Repositories.Dishes
                 }).ToList();
         }
 
-        public IEnumerable<Ingredient> GetIngredients()
-        {
-            return _context.Ingredients.Select(x => new Models.Ingredient()
-            {
-                Id = x.ID,
-                Description = x.Description,
-                Name = x.Name,
-                
-            }).ToList();
-        }
+       
 
     }
 }
