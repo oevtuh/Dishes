@@ -47,4 +47,25 @@
     };
 
 
+ 
+       $(document).ready(function () {
+
+           $(".plus").show();
+           $(".minus").hide();
+           $(".ingredient-box").hide();
+           $(".category").click(function () {
+                
+               $(".plus").toggle();
+               $(".minus").toggle();
+               $(this).siblings(".ingredient-box").fadeToggle();
+
+           });
+
+       });
+   
+
+
+
+
+
 })(jQuery);

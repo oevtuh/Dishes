@@ -67,4 +67,49 @@ input[type="checkbox"].input-validation-error {
     color:#ffffff; 
 }
 
+.panel li {
+    list-style-type: none;
+    color: #999999;
+    font-family: Arial, sans-serif
+}
+
+.panel a {
+    color: #999999;
+    font-family: Arial, sans-serif
+}
+
+.panel-heading {
+     color: #999999;
+    font-family: Arial, sans-serif;
+        font-family: "Lato";
+}
+
+
+
+.category-box {
+     
+    font-family: "Lato";
+}
+
+.category {
+    color: black;
+    font-size: 22px;
+    
+    
+}
+
+
+
+.ingredient-box {
+    color: #999999;
+    font-family: "Lato";
+}
+
+.each-dish {
+    float: left;
+    margin: 25px;
+    width: 130px;
+}
+
+
 

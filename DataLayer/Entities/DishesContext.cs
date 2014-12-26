@@ -13,6 +13,10 @@ namespace DataLayer.Entities
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<DishCategory> DishCategories { get; set; }
         public DbSet<IngredientCategory> IngredientCategories { get; set; }
+        new public void SaveChanges()
+        {
+            base.SaveChanges();
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

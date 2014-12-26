@@ -38,26 +38,36 @@
             }
 
         </select>*@
-        @Html.Action("Choose", "Ingredients");
+        @Html.Action("Choose", "Ingredients")
         
         
        
 
-        <ul id="dishesList"></ul>
+        <ul class="dishesList"></ul>
 
         <div class="panel panel-default" data-bind="visible: dishes().length">
-            <div class=" panel-heading">Блюда, которые можно приготовить</div>
+            <div class="panel-heading" >Dishes that you can cook </div>
             <div class="panel-body">
-                <ul data-bind="foreach: dishes">
+                <div  data-bind="foreach: dishes">
+                    <div class="each-dish">
+                        
+                            <img data-bind="attr: {src:'/content/images_prev/'+Image}" alt="...">
+                            <br/>
+                                <a data-bind="text: Name, attr: { href: '@Url.AbsoluteAction("Dish", "Dishes")'.replace('{id}', Id)}">
+                                </a>
+                                
+                           
+                        <hr />
+                    </div>
+                    
                    
-                    <li><a data-bind="text: Name, attr: { href: '@Url.AbsoluteAction("Dish", "Dishes")'.replace('{id}', Id)}"></a></li>
+                    
 
-
-                </ul>
-            </div>
+                </div>
+                 </div>
         </div>
     
-    
+        @*<div style="clear: both"></div>*@
     </body>
 </html>
 

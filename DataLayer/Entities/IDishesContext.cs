@@ -9,5 +9,6 @@ namespace DataLayer.Entities
         DbSet<Ingredient> Ingredients { get; set; }
         DbSet<DishCategory> DishCategories { get; set; }
         DbSet<IngredientCategory> IngredientCategories { get; set; }
+        void SaveChanges();
     }
 }

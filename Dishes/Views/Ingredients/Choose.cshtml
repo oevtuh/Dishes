@@ -24,10 +24,10 @@
         <span class="minus">- </span >*@
         <span class="category" data-categoryid="@category.Id">@category.Name </span> 
         <br/>
-        <div class="div1" >
+        <div class="ingredient-box" >
             @foreach (var ingredient in category.Ingredients)
             {
-                <input class="ch1" type="checkbox" data-ingredientid="@ingredient.Id" value="@ingredient.Id"/>
+                <input type="checkbox" data-ingredientid="@ingredient.Id" value="@ingredient.Id"/>
                 @ingredient.Name
                 <br />
 
@@ -46,20 +46,4 @@
 
 
    
-    <script>
-        $(document).ready(function () {
-
-            $(".plus").show();
-            $(".minus").hide();
-            $(".div1").hide();
-            $(".category").click(function () {
-                var temp = $(this).data('categoryId');
-                console.log(temp);
-                $(".plus").toggle();
-                $(".minus").toggle();
-                $(".div1").fadeToggle();
-
-            });
-
-        });
-    </script>
+   

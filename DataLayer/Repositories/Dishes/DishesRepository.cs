@@ -81,6 +81,14 @@ namespace DataLayer.Repositories.Dishes
         }
 
        
+        public void AddDish(Dish dish)
+        {
+            _context.Dishes.Add(new Entities.Dish
+            {
+                Name = dish.Name
+            });
 
+            _context.SaveChanges();
+        }
     }
 }

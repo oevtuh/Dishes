@@ -5445,7 +5445,10 @@ a.list-group-item:focus {
 }
 
 .panel-default > .panel-heading {
-  color: #333333;
+
+    color: black;
+    font-family: "Lato";
+    font-size: 22px;
   background-color: #f5f5f5;
   border-color: #dddddd;
 }
@@ -6816,3 +6819,4 @@ td.visible-print {
     display: none !important;
   }
 }
+
