@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using DataLayer.Repositories.Dishes;
+
+using Dish = Models.Dish;
 using Newtonsoft.Json;
 
 namespace Dishes.Controllers
@@ -41,10 +43,11 @@ namespace Dishes.Controllers
 
         public ActionResult Alldishes()
         {
-            var model = _dishesRepository.GetDishes();
+            var model = _dishesRepository.GetCategories();
             return View(model);
         }
 
+      
         public ActionResult FindByIngredient(int id)
         {
             var model = _dishesRepository.GetDishes(id);
@@ -91,6 +94,12 @@ namespace Dishes.Controllers
             var model = _dishesRepository.GetDishes(dishes);
 
             return Json(model, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult DishesInCategory(int categoryId=0 )
+        {
+            IEnumerable<Dish> model = _dishesRepository.GetDishesByCategory(categoryId);
+            return View(model);
         }
 
 

@@ -51,10 +51,14 @@
                 <div  data-bind="foreach: dishes">
                     <div class="each-dish">
                         
-                            <img data-bind="attr: {src:'/content/images_prev/'+Image}" alt="...">
+                        <a data-bind="attr: { href: '@Url.AbsoluteAction("Dish", "Dishes")'.replace('{id}', Id)}">
+                            <img data-bind="attr: {src:'/content/images_prev/'+Image}" alt="..."/>
+                        </a>
+                        
                             <br/>
-                                <a data-bind="text: Name, attr: { href: '@Url.AbsoluteAction("Dish", "Dishes")'.replace('{id}', Id)}">
-                                </a>
+                            <a data-bind="text: Name, attr: { href: '@Url.AbsoluteAction("Dish", "Dishes")'.replace('{id}', Id)}">
+                            
+                            </a>
                                 
                            
                         <hr />

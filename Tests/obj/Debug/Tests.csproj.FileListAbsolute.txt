@@ -1,0 +1,16 @@
+D:\Projects\Dishes\Tests\bin\Debug\Tests.dll
+D:\Projects\Dishes\Tests\bin\Debug\Tests.pdb
+D:\Projects\Dishes\Tests\bin\Debug\nunit.framework.dll
+D:\Projects\Dishes\Tests\bin\Debug\nunit.framework.xml
+D:\Projects\Dishes\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+D:\Projects\Dishes\Tests\obj\Debug\Tests.dll
+D:\Projects\Dishes\Tests\obj\Debug\Tests.pdb
+D:\Projects\Dishes\Tests\bin\Debug\Tests.dll.config
+D:\Projects\Dishes\Tests\bin\Debug\DataLayer.dll
+D:\Projects\Dishes\Tests\bin\Debug\EntityFramework.dll
+D:\Projects\Dishes\Tests\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Dishes\Tests\bin\Debug\Models.dll
+D:\Projects\Dishes\Tests\bin\Debug\DataLayer.pdb
+D:\Projects\Dishes\Tests\bin\Debug\EntityFramework.xml
+D:\Projects\Dishes\Tests\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Dishes\Tests\bin\Debug\Models.pdb

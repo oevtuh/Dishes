@@ -63,7 +63,8 @@ namespace Dishes
             routes.MapRoute(
             null,
             "dishes/{id}",
-            new { controller = "Dishes", action = "Dish" }
+            new { controller = "Dishes", action = "Dish" },
+            new {id =  @"\d+"}
            );
             
            // //for the ulr.action

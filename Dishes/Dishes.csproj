@@ -216,10 +216,12 @@
     <Compile Include="Migrations\201412232049111_RenameDishCategoryDishesTable.Designer.cs">
       <DependentUpon>201412232049111_RenameDishCategoryDishesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412291855227_ImageForDishCategory.cs" />
+    <Compile Include="Migrations\201412291855227_ImageForDishCategory.Designer.cs">
+      <DependentUpon>201412291855227_ImageForDishCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Dish.cs" />
-    <Compile Include="Models\DishCategory.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -288,6 +290,7 @@
     <Content Include="Views\Dishes\FindByIngredient.cshtml" />
     <Content Include="Views\Dishes\FindByIngredients.cshtml" />
     <Content Include="Views\Ingredients\Choose.cshtml" />
+    <Content Include="Views\Dishes\DishesInCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -324,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412232049111_RenameDishCategoryDishesTable.resx">
       <DependentUpon>201412232049111_RenameDishCategoryDishesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412291855227_ImageForDishCategory.resx">
+      <DependentUpon>201412291855227_ImageForDishCategory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

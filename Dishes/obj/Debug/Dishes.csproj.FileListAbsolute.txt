@@ -152,3 +152,4 @@ D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.AlterDishes.resources
 D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.Add_DishCategory.resources
 D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.Add_IngredientCategory.resources
 D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.RenameDishCategoryDishesTable.resources
+D:\Projects\Dishes\Dishes\obj\Debug\Dishes.Migrations.ImageForDishCategory.resources

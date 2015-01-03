@@ -10,8 +10,8 @@ namespace DataLayer.Repositories.Dishes
         IEnumerable<Dish> GetDishes();
         Dish GetDish(int id);
         IEnumerable<Dish> GetDishes(IEnumerable<int> ingredients);
-     
-
+        IEnumerable<DishCategory> GetCategories();
+        IEnumerable<Dish> GetDishesByCategory(int categoryId);
     }
 
     

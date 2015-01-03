@@ -111,5 +111,9 @@ input[type="checkbox"].input-validation-error {
     width: 130px;
 }
 
+.all-dishes {
+    right: 50px;
+    float: right;
+}
 
 

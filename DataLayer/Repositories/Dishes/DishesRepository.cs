@@ -5,6 +5,7 @@ using Dish = Models.Dish;
 using Ingredient = Models.Ingredient;
 using DishCategory = Models.DishCategory;
 
+
 namespace DataLayer.Repositories.Dishes
 {
     public class DishesRepository : IDishesRepository
@@ -89,6 +90,53 @@ namespace DataLayer.Repositories.Dishes
             });
 
             _context.SaveChanges();
+        }
+
+
+        public IEnumerable<DishCategory> GetCategories()
+        {
+
+
+            return _context.DishCategories.Select(x => new DishCategory
+            {
+                Id = x.ID,
+                Name = x.Name,
+                Image = x.Image
+                //Dishes = x.Dishes.Select(d => new Dish
+                //{
+                //    Id = d.ID,
+                //    Description = d.Description,
+                //    ShortDescription = d.ShortDescription,
+                //    Name = d.Name,
+                //    Image = d.Image
+                //}),
+                //Dishes = _context.Dishes.Where(y => y.Categories.Any(v => v.ID == x.ID)).Select(p => new Models.Dish
+                //{
+                //    Id = p.ID,
+                //    Description = p.Description,
+                //    ShortDescription = p.ShortDescription,
+                //    Name = x.Name,
+                //    Image = x.Image
+                //})
+            }).ToList();
+
+
+
+        }
+
+        public IEnumerable<Dish> GetDishesByCategory(int categoryId)
+        {
+            var dishes =  _context.Dishes.Where(x => x.Categories.Any(c => categoryId==0 || c.ID == categoryId))
+                .Select(x => new Dish
+                {
+                    Id = x.ID,
+                    Image = x.Image,
+                    Description = x.Description,
+                    Name = x.Name,
+                    ShortDescription = x.ShortDescription
+                }).ToList();
+
+            return dishes;
         }
     }
 }

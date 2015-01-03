@@ -30,7 +30,8 @@ namespace DataLayer.Repositories.Ingredients
                   Ingredients = _context.Ingredients.Where(t => t.Category.ID == x.ID).Select(y => new Ingredient
                   {
                       Id = y.ID,
-                      Name = y.Name
+                      Name = y.Name,
+                      
 
                   })
 
