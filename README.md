@@ -1,11 +1,6 @@
 # Dishes
 This web project allows you to select some dishes from ingredients that you have.
 Goal of the project - to deep knowledge and experience in ASP. NET MVC.
-Technologies  that I’ve used:
--	ASP. NET MVC 5
--	Frameworks: Ninject, Entity Framework, Knockout JS, jQuery.
-
-
 
 1.The main page:
 
