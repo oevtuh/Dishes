@@ -20,6 +20,8 @@ namespace Dishes
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             Database.SetInitializer<DishesContext>(null);
+
+            //DependencyResolver.SetResolver(new NinjectDependecyResolver());
         }
     }
 }

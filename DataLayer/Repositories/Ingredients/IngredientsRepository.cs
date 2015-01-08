@@ -18,9 +18,7 @@ namespace DataLayer.Repositories.Ingredients
 
           public IEnumerable<IngredientCategory> GetCategories()
           {
-              //var temp = _context.Ingredients.All(t => t.ID == 5);
-
-              return _context.IngredientCategories.Select(x => new IngredientCategory
+             return _context.IngredientCategories.Select(x => new IngredientCategory
               {
                   Id = x.ID,
                   Name = x.Name,
@@ -39,17 +37,7 @@ namespace DataLayer.Repositories.Ingredients
 
           }
 
-          //public IEnumerable<Ingredient> GetCategoryByCategoryId(int id)
-          //{
-          //    return _context.Ingredients.Where(i => i.ID==id).Select(x => new Ingredient
-          //    {
-          //        Id = x.ID,
-          //        Name = x.Name
-
-          //    });
-          //}
-
-        
+          
         public IEnumerable<Ingredient> GetIngredients()
         {
             return _context.Ingredients.Select(x => new Ingredient()

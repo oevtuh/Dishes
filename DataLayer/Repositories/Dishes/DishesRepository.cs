@@ -102,22 +102,6 @@ namespace DataLayer.Repositories.Dishes
                 Id = x.ID,
                 Name = x.Name,
                 Image = x.Image
-                //Dishes = x.Dishes.Select(d => new Dish
-                //{
-                //    Id = d.ID,
-                //    Description = d.Description,
-                //    ShortDescription = d.ShortDescription,
-                //    Name = d.Name,
-                //    Image = d.Image
-                //}),
-                //Dishes = _context.Dishes.Where(y => y.Categories.Any(v => v.ID == x.ID)).Select(p => new Models.Dish
-                //{
-                //    Id = p.ID,
-                //    Description = p.Description,
-                //    ShortDescription = p.ShortDescription,
-                //    Name = x.Name,
-                //    Image = x.Image
-                //})
             }).ToList();
 
 

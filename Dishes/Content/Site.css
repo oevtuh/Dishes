@@ -116,4 +116,19 @@ input[type="checkbox"].input-validation-error {
     float: right;
 }
 
+.caption {
+    margin-bottom: 30px;
+}
+
+.single-dish {
+    color: #999999;
+    font-family: "Lato";
+    font-size: 22px;
+    padding: 35px;
+}
+
+.main-dish-image {
+    padding: 20px;
+}
+
 

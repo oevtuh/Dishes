@@ -1,30 +1,38 @@
-﻿//using System.Data.Entity;
-//using DataLayer.Entities;
+﻿using System.Data.Entity;
+using DataLayer.Entities;
 
-//namespace Tests.FakeData
-//{
-//    public class FakeDbContext : IDishesContext
-//    {
-//        public DbSet<Dish> Dishes {
-//            get
-//            {
-//                return new DbSet<Dish>
-//                {
-//                    new Dish
-//                    {
-//                        Description = "Desc"
-//                    }
-//                };
-//            };
-//            set { } ;
-//        }
-//        public DbSet<Ingredient> Ingredients { get; set; }
-//        public DbSet<DishCategory> DishCategories { get; set; }
-//        public DbSet<IngredientCategory> IngredientCategories { get; set; }
+namespace Tests.FakeData
+{
+    public class FakeDbContext : IDishesContext
+    {
+        //public IDbSet<Dish> Dishes
+        //{
+        //    get
+        //    {
+        //        return new FakeDbSet<Dish>
+        //        {
+        //            new Dish
+        //            {
+        //                ID = 1,
+        //                Name = "Test Dish"
+        //            }
+        //        };
+        //    }
+        //    set
+        //    {
+                
+        //    } 
+        //}
+       
+        public virtual IDbSet<Dish> Dishes { get; set; }
 
-//        public void SaveChanges()
-//        {
-//            throw new System.NotImplementedException();
-//        }
-//    }
-//}
+        public virtual IDbSet<Ingredient> Ingredients { get; set; }
+        public virtual IDbSet<DishCategory> DishCategories { get; set; }
+        public virtual IDbSet<IngredientCategory> IngredientCategories { get; set; }
+
+        public void SaveChanges()
+        {
+            
+        }
+    }
+}

@@ -19,30 +19,9 @@
     <link rel="stylesheet" href="../../Content/chosen.css">
 </head>
     <body>
-        @*'@Url.Action("Dish", "Dishes")'*@
-    
         
-       
-        @*<p>Full name: <strong data-bind="text: fullName"></strong></p>*@
-
-        @*<button data-bind="click: addSeat">Reserve another seat</button>
-        <button data-bind="click: addSeat2">Reserve another seat2</button>*@
-        
-
-        @*<select class="chzn-select" multiple="true" name="faculty" style="width:200px;">
-            @foreach (var ingredient in Model)
-            {
-                <option value=@ingredient.Id>
-                    @ingredient.Name
-                </option>
-            }
-
-        </select>*@
         @Html.Action("Choose", "Ingredients")
         
-        
-       
-
         <ul class="dishesList"></ul>
 
         <div class="panel panel-default" data-bind="visible: dishes().length">
@@ -63,15 +42,12 @@
                            
                         <hr />
                     </div>
-                    
-                   
-                    
 
                 </div>
-                 </div>
+            </div>
         </div>
     
-        @*<div style="clear: both"></div>*@
+       
     </body>
 </html>
 

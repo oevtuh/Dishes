@@ -5,10 +5,10 @@ namespace DataLayer.Entities
 {
     public interface IDishesContext
     {
-        DbSet<Dish> Dishes { get; set; }
-        DbSet<Ingredient> Ingredients { get; set; }
-        DbSet<DishCategory> DishCategories { get; set; }
-        DbSet<IngredientCategory> IngredientCategories { get; set; }
+        IDbSet<Dish> Dishes { get; set; }
+        IDbSet<Ingredient> Ingredients { get; set; }
+        IDbSet<DishCategory> DishCategories { get; set; }
+        IDbSet<IngredientCategory> IngredientCategories { get; set; }
         void SaveChanges();
     }
 }

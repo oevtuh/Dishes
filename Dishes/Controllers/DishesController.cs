@@ -54,49 +54,13 @@ namespace Dishes.Controllers
             return View(model);
         }
 
-        /*public JsonResult FindByIngredients()
+       public ActionResult FindByIngredients(List<int> dishes)
         {
-            IEnumerable<int> ingredients = new List<int> {1,2,4};
-
-            var model = _dishesRepository.GetDishes(ingredients);
-            return Json(model, JsonRequestBehavior.AllowGet);
-        }*/
-
-        //[AcceptVerbs(HttpVerbs.Post)]
-        //[HttpPost]
-        public ActionResult FindByIngredients(List<int> dishes)
-        {
-            //var deserializedObject = JsonConvert.DeserializeObject<List<int>>(json);
-
-           // string myobj = JsonConvert.SerializeObject(json);
-           // ICollection<int> ingredients2 = new List<int>();
-
-            //List<int> idList= new List<int>();
-            //foreach (var i in Name)
-            //{
-            //    idList.Add(Convert.ToInt32(i)-48);
-            //}
-            
-
-            //IList<int> ingredients = new List<int> { 1,2,3 };
-            //if (Name.Length < 5)
-            //{
-            //    ingredients = new List<int> {1, 2};
-            //}
-            //else
-            //{
-            //    ingredients = new List<int> {1, 2, 3, 4};
-            //}
-            // ingredients.Add(2);
-			//1
-
-
-            var model = _dishesRepository.GetDishes(dishes);
-
-            return Json(model, JsonRequestBehavior.AllowGet);
+           var model = _dishesRepository.GetDishes(dishes);
+           return Json(model, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult DishesInCategory(int categoryId=0 )
+        public ViewResult DishesInCategory(int categoryId=0 )
         {
             IEnumerable<Dish> model = _dishesRepository.GetDishesByCategory(categoryId);
             return View(model);

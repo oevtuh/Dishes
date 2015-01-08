@@ -4,13 +4,24 @@
     Layout = "../Shared/_Layout.cshtml";
 }
 
+<div class="all-dishes">
 
-<div class="row featurette">
-    <div class="col-md-7">
-        <h2 class="featurette-heading"> @Model.Name</h2>
-        <p class="lead">@Model.Description</p>
-    </div>
-    <div class="col-md-5">
-        <img class="featurette-image img-responsive" src="/content/images/@Model.Image" width="300" height="300" alt="Generic placeholder image">
+    <a href="@Url.Action("DishesInCategory", "Dishes")">
+        Show all dishes
+    </a>
+
+</div>
+
+<div >
+    <div class="row featurette">
+        <div class="col-md-7 single-dish">
+            
+           <p>@Model.Name</p> 
+           <p>@Model.Description</p>
+            
+        </div>
+        <div class="col-md-5 main-dish-image">
+            <img class="featurette-image img-responsive" src="/content/images/@Model.Image" width="300" height="300" alt="Generic placeholder image">
+        </div>
     </div>
 </div>

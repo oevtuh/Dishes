@@ -9,10 +9,10 @@ namespace DataLayer.Entities
         {
             
         }
-        public DbSet<Dish> Dishes { get; set; }
-        public DbSet<Ingredient> Ingredients { get; set; }
-        public DbSet<DishCategory> DishCategories { get; set; }
-        public DbSet<IngredientCategory> IngredientCategories { get; set; }
+        public IDbSet<Dish> Dishes { get; set; }
+        public IDbSet<Ingredient> Ingredients { get; set; }
+        public IDbSet<DishCategory> DishCategories { get; set; }
+        public IDbSet<IngredientCategory> IngredientCategories { get; set; }
         new public void SaveChanges()
         {
             base.SaveChanges();

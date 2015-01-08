@@ -40,8 +40,9 @@
                 <div class="caption">
                     <a href="@Url.Action("DishesInCategory", "Dishes", new {categoryId = category.Id})">
                         <h3>@category.Name</h3>
+                        <img src="/content/images/@category.Image" alt="...">
                     </a>
-                    <img src="/content/images/@category.Image" alt="...">
+                    
 
                     @*<p><a href="@Url.Action("Dish", "Dishes", new { id = dish.Id})" class="btn btn-primary" role="button">Подробнее</a> <a href="#" class="btn btn-default" role="button">Button</a></p>*@
                 </div>

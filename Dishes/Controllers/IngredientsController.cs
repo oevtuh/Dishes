@@ -25,10 +25,6 @@ namespace Dishes.Controllers
                return View(model);
            }
 
-        //public ActionResult GetIngredientsByCategory(int id)
-        //{
-        //    var model = _ingredientsRepository.GetCategoryByCategoryId(id);
-        //    return View(model);
-        //}
+        
 	}
 }
