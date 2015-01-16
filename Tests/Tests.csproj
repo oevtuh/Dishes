@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="DataLayer\Repositories\Config.cs" />
     <Compile Include="DataLayer\Repositories\TestDishesRepository.cs" />
+    <Compile Include="DataLayer\Repositories\TestIngredientRepository.cs" />
     <Compile Include="FakeData\FakeDbContext.cs" />
     <Compile Include="FakeData\FakeDbSet.cs" />
     <Compile Include="MockRepository .cs" />

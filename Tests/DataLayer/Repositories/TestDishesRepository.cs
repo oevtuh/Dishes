@@ -20,20 +20,13 @@ namespace Tests.DataLayer.Repositories
     {
         private IDishesRepository r;
         private IDishesRepository _repository;
-        private IIngredientsRepository _ingredientsRepository;
+        
         private FakeDbContext s;
         private Mock<FakeDbContext> _contextMock;
         private DishesController c;
         //private List<> 
 
-        public TestDishesRepository()
-        {
-
-         
-
-
-        }
-
+       
         [SetUp]
         public void SetUp()
         {
@@ -161,7 +154,7 @@ namespace Tests.DataLayer.Repositories
 
             //_repository = DependencyResolver.Current.GetService<IDishesRepository>(_contextMock);
             _repository = new DishesRepository(_contextMock.Object);
-            _ingredientsRepository = new IngredientsRepository(_contextMock.Object);
+            
 
 
             
@@ -210,12 +203,7 @@ namespace Tests.DataLayer.Repositories
             Assert.IsTrue(_repository.GetDishes(arrayWrong).Count()==2);
         }
 
-        [Test]
-        public void Test_GetIngredients()
-        {
         
-            Assert.IsTrue(_ingredientsRepository.GetIngredients().Count() == 4);
-        }
 
         [Test]
         public void Test_GetDishesCategories()
