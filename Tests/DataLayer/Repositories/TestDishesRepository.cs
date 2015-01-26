@@ -26,7 +26,7 @@ namespace Tests.DataLayer.Repositories
         private DishesController c;
         //private List<> 
 
-       
+
         [SetUp]
         public void SetUp()
         {
@@ -99,8 +99,7 @@ namespace Tests.DataLayer.Repositories
             };
 
 
-            dishes =
-            new FakeDbSet<Dish>
+            dishes = new FakeDbSet<Dish>
             {
                 new Dish
                 {
@@ -146,41 +145,51 @@ namespace Tests.DataLayer.Repositories
                 }
             };
 
+            _contextMock = new Mock<FakeDbContext>();
+            _contextMock.Setup(i => i.Ingredients).Returns(ingredients);
+            _contextMock.Setup(d => d.DishCategories).Returns(dishesCategories);
+            _contextMock.Setup(x => x.Dishes).Returns(dishes);
             
+            
+            
+
+           
+        }
+        
+        public void SetUp2()
+        {
+            var ingredients = new FakeDbSet<Ingredient>();
+
+            var dishes = new FakeDbSet<Dish>();
+
+            var dishesCategories = new FakeDbSet<DishCategory>();
+
+
+
+
             _contextMock = new Mock<FakeDbContext>();
             _contextMock.Setup(x => x.Dishes).Returns(dishes);
-            _contextMock.Setup(c => c.Ingredients).Returns(ingredients);
+            _contextMock.Setup(i => i.Ingredients).Returns(ingredients);
             _contextMock.Setup(d => d.DishCategories).Returns(dishesCategories);
+        }
+
+        [SetUp]
+        public void Setup2()
+        {
+           
 
             //_repository = DependencyResolver.Current.GetService<IDishesRepository>(_contextMock);
             _repository = new DishesRepository(_contextMock.Object);
-            
-
-
-            
-
-           // InitKernel();
         }
 
-        //protected virtual IKernel InitKernel()
-        //{
-        //    var kernel = new StandardKernel();
-        //    DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
-        //    InitRepository(kernel); //потом сделаем
-        //    return kernel;
-        //}
-
-        //protected virtual void InitRepository(StandardKernel kernel)
-        //{
-        //    kernel.Bind<MockRepository>().To<MockRepository>().InThreadScope();
-        //    kernel.Bind<IDishesRepository>().ToMethod(p => kernel.Get<MockRepository>().Object);
-        //}
 
         [Test]
         public void Test_GetDishes()
         {
             //Assert.IsTrue(_repository.GetDish(1).Ingredients.Count() == 2);
             //Assert.IsTrue(!_repository.GetDish(5).Ingredients.Any());
+
+            var x = _repository.GetDish(1);
 
             Assert.IsNotNull(_repository.GetDish(1));
             Assert.IsTrue(_repository.GetDishes().Count() == 6);
@@ -220,27 +229,17 @@ namespace Tests.DataLayer.Repositories
             Assert.IsFalse(_repository.GetDishesByCategory(5).Any());
         }
 
+        [Test]
+        public void Test_GetIngredintsInDish()
+        {
+            var y = _repository.GetDish(2);
+            var x = _repository.GetDish(1).Ingredients;
+
+            Assert.IsTrue(_repository.GetDish(1).Ingredients.Count() == 4);
+
+        }
         
-
-        //[Test]
-        //public void Test_two()
-        //{
-
-        //    Mock<IDishesRepository> mock = new Mock<IDishesRepository>();
-        //    mock.Setup(m => m.GetDishes()).Returns(new Models.Dish[] { 
-        //    new Models.Dish {Id = 1, Name = "P1"}, 
-        //    new Models.Dish {Id = 2, Name = "P2"}, 
-        //    new Models.Dish {Id = 3, Name = "P3"}, 
-        //    new Models.Dish {Id = 4, Name = "P4"}, 
-        //    new Models.Dish {Id = 5, Name = "P5"} 
-        //    }.AsQueryable());
-
-        //    DishesController controller = new DishesController(mock.Object);
-
-        //    Models.Dish[] arr = (Models.Dish[])controller.DishesInCategory().Model;
-        //    Assert.IsTrue(arr.Count() == 5);
-
-        //}
+        
     }
 
     public partial class MockRepository : Mock<IDishesRepository>

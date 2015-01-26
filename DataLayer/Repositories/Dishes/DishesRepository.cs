@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DataLayer.Entities;
+using Models;
 using Dish = Models.Dish;
 using Ingredient = Models.Ingredient;
 using DishCategory = Models.DishCategory;
+using IngredientCategory = Models.IngredientCategory;
 
 
 namespace DataLayer.Repositories.Dishes
@@ -62,7 +64,19 @@ namespace DataLayer.Repositories.Dishes
                 Description = x.Description,
                 ShortDescription = x.ShortDescription,
                 Name = x.Name,
-                Image = x.Image
+                Image = x.Image,
+                Ingredients = x.Ingredients.Select(i => new Ingredient
+                {
+                    Name = i.Name,
+                    Description = i.Description,
+                    Id = i.ID
+                }),
+                Categories = x.Categories.Select(c => new DishCategory
+                {
+                    Name = c.Name,
+                    Id = c.ID,
+                    Image = c.Image
+                })
             }).FirstOrDefault(dish => dish.Id == id);
             
         }

@@ -164,9 +164,9 @@ namespace Tests.DataLayer.Repositories
 
             _contextMock = new Mock<FakeDbContext>();
             _contextMock.Setup(x => x.Dishes).Returns(dishes);
-            _contextMock.Setup(c => c.Ingredients).Returns(ingredients);
+            _contextMock.Setup(i => i.Ingredients).Returns(ingredients);
             _contextMock.Setup(d => d.DishCategories).Returns(dishesCategories);
-            _contextMock.Setup(d => d.IngredientCategories).Returns(ingredientsCategories);
+            _contextMock.Setup(e => e.IngredientCategories).Returns(ingredientsCategories);
 
             //_repository = DependencyResolver.Current.GetService<IDishesRepository>(_contextMock);
            
