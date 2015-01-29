@@ -234,7 +234,6 @@ namespace Tests.DataLayer.Repositories
         {
             var y = _repository.GetDish(2);
             var x = _repository.GetDish(1).Ingredients;
-
             Assert.IsTrue(_repository.GetDish(1).Ingredients.Count() == 4);
 
         }
