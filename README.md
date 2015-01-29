@@ -2,6 +2,8 @@
 This web project allows you to select some dishes from ingredients that you have.
 Goal of the project - to deep knowledge and experience in ASP. NET MVC.
 
+It's available on http://olegevtuh.com.ua/
+
 1.The main page:
 
 ![alt tag](https://github.com/olegzxz/Dishes/blob/master/Dishes/Content/images/1_readme.jpg)
