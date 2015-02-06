@@ -26,10 +26,12 @@ namespace Dishes.Controllers
             
             return View();
         }
+		
         public ActionResult Create()
         {
             return View();
         }
+		
         public ActionResult Find()
         {
             return View();
@@ -40,26 +42,25 @@ namespace Dishes.Controllers
             var model = _dishesRepository.GetDish(id);
             return View(model);
         }
-
+		
         public ActionResult Alldishes()
         {
             var model = _dishesRepository.GetCategories();
             return View(model);
         }
-
       
         public ActionResult FindByIngredient(int id)
         {
             var model = _dishesRepository.GetDishes(id);
             return View(model);
         }
-
+		
        public ActionResult FindByIngredients(List<int> dishes)
         {
            var model = _dishesRepository.GetDishes(dishes);
            return Json(model, JsonRequestBehavior.AllowGet);
         }
-
+		
         public ViewResult DishesInCategory(int categoryId=0 )
         {
             IEnumerable<Dish> model = _dishesRepository.GetDishesByCategory(categoryId);
